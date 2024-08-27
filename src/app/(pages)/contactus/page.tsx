@@ -40,7 +40,7 @@ const contactData:Array<Props>=[
 
 ]
 
-const page = (props: Props) => {
+const Contactpage = (props: Props) => {
   const[loading, setLoading] = useState(true)
   const inputStyles = `mb-4 w-full bg-transparent px-5 py-3 placeholder-[#C2C2C2] placeholder:text-xs border border-[#C2C2C2]`
   const {
@@ -182,4 +182,4 @@ const page = (props: Props) => {
 }
 }
 
-export default page
+export default Contactpage

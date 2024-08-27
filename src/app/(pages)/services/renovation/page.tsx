@@ -12,7 +12,7 @@ import Testimonals from '@/app/components/testimonials/testimonals'
 
 type Props = {}
 
-const Service2 = (props: Props) => {
+const RenovationPage = (props: Props) => {
   const[loading, setLoading] = useState(true)
   // for loading
   useEffect(() => {
@@ -100,4 +100,4 @@ const Service2 = (props: Props) => {
 }
 }
 
-export default Service2
+export default RenovationPage

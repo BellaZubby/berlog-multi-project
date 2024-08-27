@@ -19,7 +19,7 @@ const Project = () => {
     setTimeout(() => {
         setLoading(false)
     }, 200)
-  }, [])
+  }, [images])
 
   if(loading) {
     return <Loading/>
