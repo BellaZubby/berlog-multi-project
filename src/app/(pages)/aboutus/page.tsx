@@ -11,7 +11,7 @@ import Loading from '@/app/components/loader'
 import Clipped from '@/app/components/clipped-asset'
 import ClosingRemark from '@/app/components/closingRemark'
 
-type Props = {
+type valueTypes = {
   icon:any;
   title: string;
   details?: string;
@@ -21,7 +21,7 @@ type Props = {
 
 }
 
-const CardData:Array<Props> = [
+const CardData:Array<valueTypes> = [
   {
     icon:BsLightbulb,
     title:"Our Vision",
@@ -60,7 +60,7 @@ const defaultAnimation = {
 };
 
 
-const AboutPage = (props: Props) => {
+const AboutPage = () => {
   const[loading, setLoading] = useState(true)
   // for loading
   useEffect(() => {

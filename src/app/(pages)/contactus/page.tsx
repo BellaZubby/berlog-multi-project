@@ -9,14 +9,14 @@ import { slideInFromLeft, slideInFromRight } from '@/app/hook/motion'
 import Loading from '@/app/components/loader'
 motion
 
-type Props = {
+type contactTypes = {
   icon:any;
   title?:string;
   description:string;
   link?: string;
 }
 
-const contactData:Array<Props>=[
+const contactData:Array<contactTypes>=[
   {
       icon: Phone,
       title:"+2347045789212",
@@ -40,7 +40,7 @@ const contactData:Array<Props>=[
 
 ]
 
-const Contactpage = (props: Props) => {
+const Contactpage = () => {
   const[loading, setLoading] = useState(true)
   const inputStyles = `mb-4 w-full bg-transparent px-5 py-3 placeholder-[#C2C2C2] placeholder:text-xs border border-[#C2C2C2]`
   const {

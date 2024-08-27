@@ -22,13 +22,13 @@ import image4 from '@/app/assets/project6.jpeg'
 import Testimonals from '@/app/components/testimonials/testimonals'
 
 
-type Props = {
+type vissionMissionTypes = {
   text:string;
   description: string;
   
 }
 
-const visionMission:Array<Props> = [
+const visionMission:Array<vissionMissionTypes> = [
   {
     text: "Our Vision",
     description: 
@@ -62,7 +62,7 @@ const doneProject:projects[] = [
   },
 ]
 
-const HomePage = ({}:Props) => {
+const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const aboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const ref = useRef(null);
