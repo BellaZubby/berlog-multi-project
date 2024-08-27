@@ -1,33 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: #F3F4F6;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.navBtn {
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+
+}
+.navBtn:hover {
+    color: #fff;
+    cursor: pointer;
+    border-color: #075985;
+}
+.navBtn:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0; 
+     left: 50%;
+     right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #075985;
+    border-radius: 3px;
+}
+.navBtn:hover:before {
+    transition: 0.5s all ease;
+     left:0;
+    right:0;
+    opacity:1;
+    z-index:-1;
+}
+
+/* button */
+.Btn {
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+
+}
+.Btn:hover {
+    color: #fff;
+    cursor: pointer;
+    border-color: #63C84E;
+}
+.Btn:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0; 
+     left: 50%;
+     right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #63C84E;
+    /* border-radius: 3px; */
+}
+.Btn:hover:before {
+    transition: 0.5s all ease;
+     left:0;
+    right:0;
+    opacity:1;
+    z-index:-1;
+}
+
+/* when navBg changes */
+.navNew {
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+
+}
+.navNew:hover {
+    color: #fff;
+    cursor: pointer;
+}
+.navNew:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #F69278;
+    border-radius: 4px;
+}
+.navNew:hover:before {
+    transition: 0.5s all ease;
+     left:0;
+    right:0;
+    opacity:1;
+    z-index:-1;
+}
+.sublinks {
+   background-color: transparent; 
+   padding: 10px;
+   box-shadow: inset 0 0 0 0 #63C84E;
+   transition: ease-out 0.5s;
+
+}
+.sublinks:hover {
+    box-shadow: inset 200px 0 0 0 #63C84E; 
+    color: #F0FDFA;
+    padding: 7px;
+}
+/* mobile */
+.mobileSublinks {
+    background-color: transparent; 
+    padding: 10px;
+    box-shadow: inset 0 0 0 0 #63C84E;
+    transition: ease-out 0.5s;
+}
+.mobileSublinks:hover {
+    box-shadow: inset 250px 0 0 0 #63C84E; 
+    color: #F0FDFA;
+    padding: 5px;
+}
+.hero-clip:before {
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:200px;
+    width:100%;
+    background-color: #F0FDFA;
+    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+}
+.perspective {
+    perspective: 1000px;
+}
+.board-border {
+    transform:rotateX(45deg);
+    
+}
+.checkmark {
+    box-shadow: 2px 5px 5px 5px rgb(55, 110, 128);
+}
+
+.hero-btn { 
+    box-shadow: inset 0 0 0 0 #63C84E;
+    transition: ease-out 0.5s;
+ 
+ }
+ .hero-btn:hover {
+     box-shadow: inset 300px 0 0 0 #63C84E; 
+     color: #075985;
+ }
+ .text {
+    color:#538d48
+ }
+ 
+.skew {
+    width:100%;
+    height:inherit;
+     background-color: #F3F4F6;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+} 
+.clip {
+    clip-path: polygon(0 0, 70% 0, 80% 100%, 0 100%);
+}
+.mobileClip {
+    clip-path:  polygon(0 0, 90% 0, 0% 100%, 0 100%);
+}
+.mobileClipTwo {
+    clip-path:  polygon(0 100%, 100% 0%, 100% 100%,  0 100%);
+}
+
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.clipped {
+    position: relative;
+    margin: 0;
+    clip-path: polygon(0 50%, 0 0, 100% 0%, 100% 70%, 5% 100%)
+
+}
+
+.parallax {
+  /* background-image: url('/public/heroImage1.jpg');  */
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* .clip {
+    clip-path: polygon(0 0, 90% 0, 80% 100%, 0 100%);
+} */
+text {
+    color:#2f7dd5
+}
+/* .fadeContainer {
+  position: relative; 
+  width: 100%;
+  /* height: 100%; */
+
+.fadeItem {
+    position: absolute;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+}
+.fadeItem-visible {
+    opacity:1;
 }

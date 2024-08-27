@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+.counterDesktop {
+    font-size: 70px;
+    font-weight: 500;
+    font-family:"Poppins", sans-serif;
+}
+.counterMobile {
+    font-size: 50px;
+    font-weight: 500;
+    font-family:"Poppins", sans-serif;
+}
+/* text-[70px] font-bold font-poppins */
