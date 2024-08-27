@@ -10,7 +10,7 @@ type Props = {}
 
 const Clipped = (props: Props) => {
   return (
-    <div className='clipped w-full sm:h-[430px] h-[350px] bg-primary-100 py-24'>
+    <div className='clipped w-full sm:h-[430px] h-[350px] bg-primary-100 py-24 sm:mt-20'>
 
         <div className='bg-black/20 absolute inset-0 flex flex-col items-center justify-center gap-5'>
             <h4 className='text-primary-300 text-sm ssm:text-xl sm:text-3xl font-semibold'>EXECELLENCE IN DESIGN AND CONSTRUCTION</h4>

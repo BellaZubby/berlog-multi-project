@@ -70,7 +70,7 @@ const DesktopHero = (props: Props) => {
       setCurrentState((prevIndex) => (prevIndex +1) % catchPhraseList.length);
     },3000);
     return () => clearInterval(interval)
-  }, [catchPhraseList]);
+  }, []);
 
  
   return (

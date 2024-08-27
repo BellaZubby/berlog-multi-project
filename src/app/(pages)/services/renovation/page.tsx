@@ -58,7 +58,7 @@ const RenovationPage = (props: Props) => {
          whileInView='visible'
          viewport={{once:true}}
          > 
-            <h6 className='font-bold text-primary-100'>LET'S RENOVATE YOUR LIVING SPACE</h6>
+            <h6 className='font-bold text-primary-100'>LET&apos;S RENOVATE YOUR LIVING SPACE</h6>
             <p className='mx-auto text-justify md:text-[16px] text-sm leading-relaxed text-[#525150]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Dolore eos nemo voluptates magni provident totam. Doloremque qui sed minus et velit, quos tenetur 
               inventore distinctio odit saepe, quam veniam id beatae, itaque officia? Non sunt, unde rerum vel nostrum labore, facilis voluptate eaque ratione, 
@@ -75,7 +75,7 @@ const RenovationPage = (props: Props) => {
          whileInView='visible'
          viewport={{once:true, amount:0.2}}
          > 
-            <h6 className='font-bold text-primary-100 md:text-lg'>LET'S RENOVATE YOUR LIVING SPACE</h6>
+            <h6 className='font-bold text-primary-100 md:text-lg'>LET&apos;S RENOVATE YOUR LIVING SPACE</h6>
             <p className='mx-auto text-justify md:text-[16px] text-sm leading-relaxed text-[#525150]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Dolore eos nemo voluptates magni provident totam. Doloremque qui sed minus et velit, quos tenetur 
               inventore distinctio odit saepe, quam veniam id beatae, itaque officia? Non sunt, unde rerum vel nostrum labore, facilis voluptate eaque ratione, 

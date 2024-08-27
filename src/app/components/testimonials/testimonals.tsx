@@ -65,7 +65,7 @@ const Testimonals = ({}: Props) => {
         <div className='h-auto grid sm:grid-cols-2 grid-cols-1'>
         <div className='bg-primary-100 text-white sm:py-24 py-20 md:px-14 px-10'>
             <h4 className='font-bold text-sm tracking-widest'>READ TESTIMONIALS</h4>
-            <p className=' text-[30px] sm:text-[35px] md:text-[45px]'>We appreciate our clients' feedbacks as it allows for growth, improvement and better service delivery.</p>
+            <p className=' text-[30px] sm:text-[35px] md:text-[45px]'>We appreciate our clients&apos; feedbacks as it allows for growth, improvement and better service delivery.</p>
         </div>
         <div className='bg-transparent flex flex-col justify-center px-14 gap-5 py-10 sm:py-0'>
             <Slider {...settings}>

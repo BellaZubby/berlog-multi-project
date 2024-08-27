@@ -13,7 +13,7 @@ const Projects = (props: Props) => {
 
     useEffect(() => {
         setImageData(imageData)
-    }, [])
+    }, [imageData])
 
     const {nextPage, prevPage, paginatedData, currentPage} = Paginated(imageData, 6)
   return (
