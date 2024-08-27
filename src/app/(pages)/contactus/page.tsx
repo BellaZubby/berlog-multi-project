@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Banner from '../banner'
-import { Card } from '@/app/components/card'
 import { Phone, Mail, MapPin, Globe, Send} from 'lucide-react'
 import Link from 'next/link'
 import {useForm} from 'react-hook-form';

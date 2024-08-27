@@ -1,3 +1,4 @@
+"use client"
 import AnimatedText from '@/app/components/AnimatedText'
 import Button from '@/app/components/button'
 import { Card } from '@/app/components/card'
