@@ -6,7 +6,7 @@ import { slideInFromLeft, slideInFromBottom } from "../hook/motion";
 import { catchPhraseType } from "../hook/data";
 
 
-type dataType = {
+interface dataType {
   data:catchPhraseType[]
 }
 

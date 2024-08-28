@@ -10,7 +10,7 @@ import "./projectSlick.css"
 
 
 
-type dataType = {
+interface dataType {
     data:projects[]
 }
 export interface onClickType {

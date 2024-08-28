@@ -15,12 +15,12 @@ import DesktopHero from '@/app/components/desktopHero'
 import ParallaxFact from '@/app/components/parallaxFact'
 import DoneProjects from '@/app/components/projects/doneProjects'
 import Testimonals from '@/app/components/testimonials/testimonals'
-import {catchPhraseList, doneProject, testimonialData, visionMissionTypes} from '@/app/hook/data'
+import {catchPhraseList, doneProject, testimonialData, visionMission, visionMissionTypes} from '@/app/hook/data'
 
 
 
-type valueType = {
-  data:visionMissionTypes[]
+interface valueType {
+ data:visionMissionTypes[]
 }
 
 

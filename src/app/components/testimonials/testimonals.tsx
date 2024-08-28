@@ -6,7 +6,7 @@ import "./testimonialSlick.css";
 import "./testimonialTheme.css";
 import { testimonialType } from '@/app/hook/data';
 
-type dataType = {
+interface dataType {
     data: testimonialType[]
 }
 
