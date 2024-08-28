@@ -19,13 +19,13 @@ import {catchPhraseList, doneProject, testimonialData, visionMissionTypes} from 
 
 
 
-type Props = {
+type valueType = {
   data:visionMissionTypes[]
 }
 
 
 
-const HomePage = ({data}:Props) => {
+const HomePage = ({data}:valueType) => {
   const [loading, setLoading] = useState(true);
   const aboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const ref = useRef(null);

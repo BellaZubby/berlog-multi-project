@@ -10,7 +10,7 @@ import "./projectSlick.css"
 
 
 
-type Props = {
+type dataType = {
     data:projects[]
 }
 export interface onClickType {
@@ -34,7 +34,7 @@ const NextArrow: React.FC<onClickType> = ({ onClick }) => {
         onClick={onClick}></div>);
 };
 
-const DoneProjects = ({data}:Props) => {
+const DoneProjects = ({data}:dataType) => {
     const settings = {
         dots: false,
         fade: true,

@@ -6,11 +6,11 @@ import "./testimonialSlick.css";
 import "./testimonialTheme.css";
 import { testimonialType } from '@/app/hook/data';
 
-type Props = {
+type dataType = {
     data: testimonialType[]
 }
 
-const Testimonals = ({data}:Props) => {
+const Testimonals = ({data}:dataType) => {
     const settings = {
         dots: true,
         infinite: true,
