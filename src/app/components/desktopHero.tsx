@@ -51,7 +51,7 @@ const DesktopHero = ({data}: DataType) => {
       setCurrentState((prevIndex) => (prevIndex +1) % data.length);
     },3000);
     return () => clearInterval(interval)
-  }, []);
+  }, [data.length]);
 
  
   return (
@@ -68,7 +68,7 @@ const DesktopHero = ({data}: DataType) => {
           viewport={{ once: true }}
           onViewportEnter={() => setIsInView(true)}
         >
-            <div className="bg-bg-image w-full h-screen bg-cover bg-fixed bg-no-repeat bg-center">
+            <div className="bg-bg-image w-full h-screen bg-cover bg-fixed bg-no-repeat bg-center" onLoad={() => setIsLoaded(true)}>
             <div className="bg-white/40 inset-0 h-full w-full relative">
             <div className="absolute top-[48%] md:top-[58%] -translate-y-[48%] md:-translate-y-[70%] left-4 ssm:left-7 sm:left-10">
             <motion.div 
