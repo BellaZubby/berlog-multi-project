@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'
-import { projects } from '@/app/hook/data'
+import { Projects } from '@/app/hook/data'
 import { motion } from 'framer-motion'
 import { slideInFromBottom, slideInFromLeft, slideInFromRight } from '../../hook/motion'
 import Link from 'next/link'
@@ -10,8 +10,8 @@ import "./projectSlick.css"
 
 
 
-interface dataType {
-    data:projects[]
+interface DataType {
+    data:Projects[]
 }
 export interface onClickType {
     onClick?(): (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -34,7 +34,7 @@ const NextArrow: React.FC<onClickType> = ({ onClick }) => {
         onClick={onClick}></div>);
 };
 
-const DoneProjects = ({data}:dataType) => {
+const DoneProjects = ({data}:DataType) => {
     const settings = {
         dots: false,
         fade: true,

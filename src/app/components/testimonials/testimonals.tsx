@@ -4,13 +4,13 @@ import { Quote } from 'lucide-react'
 import Slider from 'react-slick'
 import "./testimonialSlick.css";
 import "./testimonialTheme.css";
-import { testimonialType } from '@/app/hook/data';
+import { TestimonialType } from '@/app/hook/data';
 
-interface dataType {
-    data: testimonialType[]
+interface DataType {
+    data: TestimonialType[]
 }
 
-const Testimonals = ({data}:dataType) => {
+const Testimonals = ({data}:DataType) => {
     const settings = {
         dots: true,
         infinite: true,

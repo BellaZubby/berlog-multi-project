@@ -1,54 +1,17 @@
 import React from 'react'
 import berlogLogo from '@/app/assets/berlogBg.png'
 import Image from 'next/image'
-import { Phone, Mail, MapPin,Instagram, Facebook, Twitter, Linkedin } from 'lucide-react'
 import Link from 'next/link'
+import { FooterDetailType, Socials } from '../hook/data'
 
-type Props = {
-    icon:any;
-    title:string;
+interface DataType {
+    data: FooterDetailType[];
+    dataSocial: Socials[]
+
 }
-type Socials = {
-    icon:any
-    href: string
-}
+    
 
-const contactData:Array<Props>=[
-    {
-        icon: Phone,
-        title:"+2347045789212"
-    },
-    {
-        icon: Mail,
-        title: "projects@berlog.ng"
-    },
-    {
-        icon: MapPin,
-        title: "Port Harcourt, Rivers State"
-    }
-]
-
-const socialsData:Array<Socials>=[
-    {
-        icon:Facebook,
-        href: '#'
-    },
-    {
-        icon:Instagram,
-        href: '#'
-    },
-    {
-        icon:Twitter,
-        href: '#'
-    },
-    {
-        icon:Linkedin,
-        href: '#'
-    },
-
-]
-
-const Footer= (props: Props) => {
+const Footer:React.FC<DataType>= ({data, dataSocial}) => {
   return (
     <div className='bg-black/20 mt-20 sm:pt-16 pt-12'>
         <div className='grid sm:grid-cols-6 grid-cols-1 px-6 gap-6 sm:gap-0'>
@@ -56,7 +19,7 @@ const Footer= (props: Props) => {
             <div className='col-span-2'>
                 <h6 className='text-xl sm:text-2xl font-bold text-[#525150]'>Contact</h6>
                 {
-                    contactData.map((contact, idx) => (
+                    data.map((contact, idx) => (
                         <div key={idx}>
                             <p className='flex items-center gap-3 mt-4 sm:mt-6 text-[#525150] text-sm sm:text-[16px]'>
                                 <span className='text-primary-300'><contact.icon/></span>
@@ -71,7 +34,7 @@ const Footer= (props: Props) => {
                 <h6  className='text-xl sm:text-2xl font-bold text-[#525150]'>Join us</h6>
                 <div className='flex items-center gap-5'>
                     {
-                        socialsData.map((social, idx) => (
+                        dataSocial.map((social, idx) => (
                             <div key={idx} className='border-2 border-primary-300 rounded-full p-2 sm:mt-6 mt-4 '>
                                  <Link href={social.href} className='text-[#525150]'>
                                 <social.icon/>

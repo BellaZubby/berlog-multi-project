@@ -5,7 +5,7 @@ import { visionMission } from "./hook/data";
 
 
 
-export default function Home() {
+const Home:React.FC = () => {
 
   return (
     <main className="w-full h-full">
@@ -16,3 +16,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home

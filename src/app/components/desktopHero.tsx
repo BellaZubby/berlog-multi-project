@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLongUpIcon} from'@heroicons/react/24/outline'
 import Link from 'next/link'
 import { slideInFromLeft, slideInFromBottom } from "../hook/motion";
-import { catchPhraseType } from "../hook/data";
+import { CatchPhraseType } from "../hook/data";
 
 
-interface dataType {
-  data:catchPhraseType[]
+interface DataType {
+  data:CatchPhraseType[]
 }
 
   const capitalizeWords = (sentence:string) => {
@@ -38,7 +38,7 @@ const arrow ={
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
 const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
-const DesktopHero = ({data}: dataType) => {
+const DesktopHero = ({data}: DataType) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [isInView, setIsInView] = useState(false);
   const [currentState, setCurrentState] = useState(0)

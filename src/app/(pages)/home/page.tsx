@@ -15,17 +15,17 @@ import DesktopHero from '@/app/components/desktopHero'
 import ParallaxFact from '@/app/components/parallaxFact'
 import DoneProjects from '@/app/components/projects/doneProjects'
 import Testimonals from '@/app/components/testimonials/testimonals'
-import {catchPhraseList, doneProject, testimonialData, visionMission, visionMissionTypes} from '@/app/hook/data'
+import {catchPhraseList, doneProject, testimonialData, VisionMissionTypes} from '@/app/hook/data'
 
 
 
-interface valueType {
- data:visionMissionTypes[]
+interface ValueType {
+ data:VisionMissionTypes[];
 }
 
 
 
-const HomePage = ({data}:valueType) => {
+const HomePage:React.FC<ValueType> = ({data}) => {
   const [loading, setLoading] = useState(true);
   const aboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const ref = useRef(null);

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { useState } from "react";
+import { contactData,socialsData  } from "./hook/data";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,7 +33,7 @@ export default function RootLayout({
        
           <Navbar/>
          {children} 
-         <Footer icon={undefined} title={""}/>
+         <Footer data={contactData} dataSocial={socialsData}/>
       </body>
     </html>
   );
