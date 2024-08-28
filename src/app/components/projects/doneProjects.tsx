@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'
-import { projects } from '../../(pages)/home/page'
+import { projects } from '@/app/hook/data'
 import { motion } from 'framer-motion'
 import { slideInFromBottom, slideInFromLeft, slideInFromRight } from '../../hook/motion'
 import Link from 'next/link'

@@ -50,7 +50,7 @@ const socialsData:Array<Socials>=[
 
 const Footer= (props: Props) => {
   return (
-    <div className='bg-black/20 sm:mt-32 mt-20 sm:pt-16 pt-12'>
+    <div className='bg-black/20 mt-20 sm:pt-16 pt-12'>
         <div className='grid sm:grid-cols-6 grid-cols-1 px-6 gap-6 sm:gap-0'>
             <Image className='w-32 sm:w-40 object-cover col-span-2' src={berlogLogo} alt='berlog-logo'/>
             <div className='col-span-2'>

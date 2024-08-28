@@ -9,6 +9,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import renovationImage from '@/app/assets/renovation.jpg'
 import Testimonals from '@/app/components/testimonials/testimonals'
+import { testimonialData } from '@/app/hook/data'
 
 type Props = {}
 
@@ -92,7 +93,7 @@ const RenovationPage = (props: Props) => {
           <Image src={renovationImage} alt='construction' className='w-[500px] h-[350px] object-contain'/>
           </motion.div>
         </motion.div>
-        <Testimonals review={''} image={undefined} name={''} occupation={''}/>
+        <Testimonals data={testimonialData}/>
         <Clipped/>
         <ClosingRemark/>
     </div>

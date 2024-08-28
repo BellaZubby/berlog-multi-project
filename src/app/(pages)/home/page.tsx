@@ -14,55 +14,18 @@ import Loading from '../../components/loader'
 import DesktopHero from '@/app/components/desktopHero'
 import ParallaxFact from '@/app/components/parallaxFact'
 import DoneProjects from '@/app/components/projects/doneProjects'
-import { StaticImageData } from 'next/image'
-import image1 from '@/app/assets/project1.jpg'
-import image2 from '@/app/assets/project2.jpg'
-import image3 from '@/app/assets/project8.jpeg'
-import image4 from '@/app/assets/project6.jpeg'
 import Testimonals from '@/app/components/testimonials/testimonals'
+import {catchPhraseList, doneProject, testimonialData, visionMissionTypes} from '@/app/hook/data'
 
 
-type vissionMissionTypes = {
-  text:string;
-  description: string;
-  
+
+type Props = {
+  data:visionMissionTypes[]
 }
 
-const visionMission:Array<vissionMissionTypes> = [
-  {
-    text: "Our Vision",
-    description: 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta ipsum quia quos officiis suscipit fuga quis iure facilis eaque."
-  },
-  {
-    text: "Our Mission",
-    description: 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta ipsum quia quos officiis suscipit fuga quis iure facilis eaque."
-  },
 
-]
 
-// for doneProjects
-export type projects = {
-  image:StaticImageData
-}
-
-const doneProject:projects[] = [
-  {
-    image:image1
-  },
-  {
-    image:image2
-  },
-  {
-    image:image3
-  },
-  {
-    image:image4
-  },
-]
-
-const HomePage = () => {
+const HomePage = ({data}:Props) => {
   const [loading, setLoading] = useState(true);
   const aboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const ref = useRef(null);
@@ -82,8 +45,7 @@ const HomePage = () => {
   
   return (
     <div className='font-roboto'>
-        {/* <HeroSection catchPhrase={''} checkMark={undefined}/>  */}
-        <DesktopHero catchPhrase={''}/>
+        <DesktopHero data={catchPhraseList}/>
 
         <div className='pt-20 md:pb-20 pb-10 md:grid md:grid-cols-5 md:gap-20 flex flex-col items-center gap-14 px-10'>
           <motion.div 
@@ -108,7 +70,7 @@ const HomePage = () => {
           </motion.div>
           <div className='col-span-2'>
             {
-              visionMission.map((data, i) => (
+              data.map((data, i) => (
                 <div key={i} className=' pb-10 flex items-center justify-center gap-7'>
                 <motion.div 
                 initial={{opacity:0}}
@@ -144,7 +106,7 @@ const HomePage = () => {
         <DoneProjects data={doneProject}/>
         <Facts/>
         <ParallaxFact/>
-        <Testimonals review={''} image={undefined} name={''} occupation={''}/>
+        <Testimonals data={testimonialData}/>
         
         
        

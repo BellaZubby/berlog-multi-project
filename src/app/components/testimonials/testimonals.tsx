@@ -1,55 +1,16 @@
 import React from 'react'
-import image1 from '@/app/assets/testimonalImg.jpg'
-import image2 from '@/app/assets/testimonialImg2.jpg'
-import image3 from '@/app/assets/testimonialImg3.jpg'
 import Image from 'next/image'
 import { Quote } from 'lucide-react'
 import Slider from 'react-slick'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css"
 import "./testimonialSlick.css";
 import "./testimonialTheme.css";
+import { testimonialType } from '@/app/hook/data';
 
 type Props = {
-    review:string;
-    image:any;
-    name:string;
-    occupation:string
+    data: testimonialType[]
 }
 
-const testimonalData:Array<Props> = [
-    {
-        review: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Recusandae reiciendis porro voluptatem impedit, numquam voluptatibus repudiandae voluptate tempore fugit quos fuga exercitationem.",
-        image:image1,
-        name: "John Doe",
-        occupation: "Entrepreneur"
-    },
-    {
-        review: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Recusandae reiciendis porro voluptatem impedit, numquam voluptatibus repudiandae voluptate tempore fugit quos fuga exercitationem.",
-        image:image2,
-        name: "Chukwudi Nathan",
-        occupation: "Banker"
-    },
-    {
-        review: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Recusandae reiciendis porro voluptatem impedit, numquam voluptatibus repudiandae voluptate tempore fugit quos fuga exercitationem.",
-        image:image3,
-        name: "Patricia Hassan",
-        occupation: "Accountant"
-    },
-    {
-        review: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Recusandae reiciendis porro voluptatem impedit, numquam voluptatibus repudiandae voluptate tempore fugit quos fuga exercitationem.",
-        image:image1,
-        name: "John Doe",
-        occupation: "Entrepreneur"
-    },
-
-]
-
-const Testimonals = ({}: Props) => {
+const Testimonals = ({data}:Props) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -70,7 +31,7 @@ const Testimonals = ({}: Props) => {
         <div className='bg-transparent flex flex-col justify-center px-14 gap-5 py-10 sm:py-0'>
             <Slider {...settings}>
                 {
-                    testimonalData.map((testimonial, idx) => (
+                    data.map((testimonial, idx) => (
                         <div key={idx} className=''>
                              <p className='md:w-[75%] text-left mx-auto tracking-wide text-[16px] leading-relaxed'>{testimonial.review}</p>
             <div className='flex items-center gap-8 mt-10'>

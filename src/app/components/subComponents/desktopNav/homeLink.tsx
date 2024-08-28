@@ -21,7 +21,7 @@ const HomeLink = ({isTopOfPage}: Props) => {
     onMouseLeave={() =>setIsHover(!hover)}
     >
         <Link 
-         className={isActive("/") ? "text-[#2f7dd5] relative": "relative"} href={"/"}>
+         className={isActive("/") ? "text-primary-100 relative": "relative"} href={"/"}>
             {titleUpperCase}
             <span 
           style={{transform: hover ? "scaleX(1)" : "scaleX(0)"}}

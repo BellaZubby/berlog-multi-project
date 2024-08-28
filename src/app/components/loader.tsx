@@ -2,7 +2,7 @@ import React from 'react'
 import ClipLoader from "react-spinners/ClipLoader";
 import logo from '@/app/assets/berlogBg.png'
 import Image from 'next/image';
-import { PuffLoader } from 'react-spinners';
+
 
 type Props = {}
 
@@ -19,8 +19,6 @@ const Loading = (props: Props) => {
         aria-label="Loading Spinner"
         className=''
       />
-     
-      {/* <h1 className='text-primary-100 font-bold'>BERLOG MULTI PROJECT</h1> */}
     </div>
   )
 }

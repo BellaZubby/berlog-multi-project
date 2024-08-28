@@ -1,33 +1,14 @@
 import React, { useEffect, useState } from "react";
-import heroImage from "../assets/crane.jpg";
-import Image from "next/image";
-import image from "@/app/assets/deskImage.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLongUpIcon} from'@heroicons/react/24/outline'
-import { CheckIcon, PlusIcon } from '@heroicons/react/16/solid'
-import AnimatedCounter from './AnimatedCounter'
 import Link from 'next/link'
-import { slideInFromLeft, slideInFromRight, slideInFromBottom } from "../hook/motion";
-import Slider from "react-slick";
+import { slideInFromLeft, slideInFromBottom } from "../hook/motion";
+import { catchPhraseType } from "../hook/data";
 
 
 type Props = {
-    catchPhrase:string;
-    
-  }
-  const catchPhraseList:Array<Props> = [
-     {catchPhrase: "A construction company known for innovative concepts and creative designs",
-    
-     },
-     {catchPhrase: "Our works are marked by precision, and flawless execution",
-      
-     },
-     {catchPhrase: "Berlog, where expertise meets execellence",
-      
-     },
-    
-    
-  ]
+  data:catchPhraseType[]
+}
 
   const capitalizeWords = (sentence:string) => {
     return sentence.split(' ').map(word => word.charAt(0).toUpperCase()
@@ -57,7 +38,7 @@ const arrow ={
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
 const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
-const DesktopHero = (props: Props) => {
+const DesktopHero = ({data}: Props) => {
   const [isLoaded, setIsLoaded] = useState(true);
   const [isInView, setIsInView] = useState(false);
   const [currentState, setCurrentState] = useState(0)
@@ -67,7 +48,7 @@ const DesktopHero = (props: Props) => {
   //for writeup
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentState((prevIndex) => (prevIndex +1) % catchPhraseList.length);
+      setCurrentState((prevIndex) => (prevIndex +1) % data.length);
     },3000);
     return () => clearInterval(interval)
   }, []);
@@ -105,7 +86,7 @@ const DesktopHero = (props: Props) => {
             className="fadeContainer mt-14">
              
               {
-                catchPhraseList.map((phrase, idx) => (
+              data.map((phrase, idx) => (
                   <div key={idx} className={`fadeItem grid sm:grid-cols-2 grid-cols-1 ${idx===currentState ? "fadeItem-visible": ""}`}>
                     <p className="text-xl sm:text-[22px] tracking-wider leading-relaxed text-[#3d3d3c]">{phrase.catchPhrase}</p>
                   </div>

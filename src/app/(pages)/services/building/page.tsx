@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Clipped from '@/app/components/clipped-asset'
 import ClosingRemark from '@/app/components/closingRemark'
 import Testimonals from '@/app/components/testimonials/testimonals'
+import { testimonialData } from '@/app/hook/data'
 
 type Props = {}
 
@@ -92,7 +93,7 @@ const Construction = (props: Props) => {
           <Image src={buildingImage} alt='construction' className='w-[500px] h-[350px] object-contain'/>
           </motion.div>
         </motion.div>
-        <Testimonals review={''} image={undefined} name={''} occupation={''}/>
+        <Testimonals data={testimonialData}/>
         <Clipped/>
         <ClosingRemark/>
     </div>
