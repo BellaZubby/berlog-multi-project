@@ -47,9 +47,9 @@ const Navbar = (props: Props) => {
           //className={`bg-[#F3F4F6] fixed w-full top-0 text-primary-50 `}
           className={isTopOfPage ? "bg-transparent fixed w-full top-0 text-primary-50" : "hidden"}
           >
-          <div className='w-full mx-auto flex items-center justify-between px-4 py-4'>
+          <div className='w-full mx-auto flex items-center justify-between px-4 py-2'>
           <Link href={"/"}>
-            <Image className='w-28 object-cover' src={berlogLogo} alt='berlog-logo'/>
+            <Image className='w-36 object-cover' src={berlogLogo} alt='berlog-logo'/>
           </Link>
           <div>
             <MenuDesktop isTopOfPage={isTopOfPage}/>
@@ -76,7 +76,7 @@ const Navbar = (props: Props) => {
           >
           <div className='w-full mx-auto flex items-center justify-between px-4 py-2'>
           <Link href={"/"}>
-            <Image className='w-28 object-cover' src={berlogLogo} alt='berlog-logo'/>
+            <Image className='w-36 object-cover' src={berlogLogo} alt='berlog-logo'/>
           </Link>
           <div>
             <MenuDesktop isTopOfPage={isTopOfPage}/>
@@ -105,7 +105,7 @@ const Navbar = (props: Props) => {
           >
             <div className='px-7 flex relative items-center justify-between py-4'>
             <Link href={"/"} className=''>
-              <Image className='w-20 ssm:w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
+              <Image className='w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
             </Link>
             
             <span className='border rounded-full p-[10px] border-gray-600'>

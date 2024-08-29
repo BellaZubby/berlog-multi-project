@@ -36,6 +36,7 @@ const config: Config = {
           "about-bg":"url('/src/app/assets/consultancy.png')",
           "bg-image":"url('/deskImage.jpg')",
           "fact-image":"url('/factImage.jpg')",
+          "home-about":"url('/berlog.png')",
 
           
       }),

@@ -14,13 +14,14 @@ interface Props {
 
 const AboutHome = ({data}: Props) => {
   return (
-    <div className='pt-20 md:pb-20 pb-10 md:grid md:grid-cols-5 md:gap-20 flex flex-col items-center gap-14 px-10'>
-          <motion.div 
+    <div className='pt-20 md:pb-20 pb-10 md:grid md:grid-cols-5 md:gap-20 flex flex-col items-center gap-14 px-10 md:bg-no-repeat md:bg-fixed md:bg-[center_center] md:bg-home-about relative md:bg-[length:500px_300px]'>
+      <div className='absolute inset-0 bg-white/90 hidden md:block'/>
+      <motion.div 
            initial={{opacity:0, x:-100}}
            whileInView={{opacity:1, x:0}}
            transition={{duration:0.5, delay:0.5}}
            viewport={{once:true, amount:0.5}}
-          className='md:col-span-3 flex flex-col gap-4'>
+          className='md:col-span-3 flex flex-col gap-4 z-[20] '>
            <h4 className='text-justify text-lg md:text-left tracking-wider leading-loose text-primary-50'>
             Berlog Multi Project is Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Dolore minima id temporibus nihil iste dolor nobis similique 
@@ -35,7 +36,7 @@ const AboutHome = ({data}: Props) => {
             
           </motion.div>
          
-          <div className='col-span-2 text-primary-50'>
+          <div className='col-span-2 text-primary-50 z-[20]'>
             {
               data.map((data, i) => (
                 <div key={i} className=' pb-10 flex items-center justify-center gap-7'>
@@ -60,6 +61,7 @@ const AboutHome = ({data}: Props) => {
             }
             
           </div>
+          
         </div>
   )
 }
