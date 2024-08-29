@@ -43,7 +43,7 @@ const Scroll = ({}: Props) => {
     return (
     <div
         onClick={scrollToTop}
-        className={visible ?'fixed z-[999] bottom-9 right-12 bg-secondary-300 p-3 rounded-lg cursor-pointer block':'hidden'}
+        className={visible ?'fixed z-[999] bottom-9 right-7 ssm:right-12 bg-secondary-300 p-3 rounded-lg cursor-pointer block':'hidden'}
     >
             <ArrowUpIcon 
             className='w-5 h-5 text-black inline'
