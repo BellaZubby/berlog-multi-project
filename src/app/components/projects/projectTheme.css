@@ -23,7 +23,7 @@
     border: none;
     outline: none;
     /* background: #075985; */
-    background: #84cc16;
+    background: #63C84E;
 }
 .slick-Prev:hover,
 .slick-Prev:focus,
@@ -33,7 +33,7 @@
     color: transparent;
     outline: none;
     /* background: #075985; */
-    background: #84cc16;
+    background: #63C84E;
 }
 .slick-Prev:hover:before,
 .slick-Prev:focus:before,

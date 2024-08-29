@@ -87,7 +87,7 @@ const AboutPage = () => {
           duration:0.5,
           delay:1.4
         }}
-        className='grid md:grid-cols-2 items-center justify-center gap-16 md:gap-36 py-12 md:py-28 md:px-16'>
+        className='grid md:grid-cols-2 items-center justify-center gap-16 md:gap-36 py-12 md:py-28 md:px-16 overflow-x-hidden'>
         <motion.div 
         initial={{opacity:0}}
         whileInView={{opacity:1}}
@@ -97,7 +97,7 @@ const AboutPage = () => {
           delay:1.4
         }}
         className='relative flex items-center justify-center md:hidden'>
-          <Image src={globe} alt='globe' className='rotate w-[400px] h-[400px] md:w-[500px] md:h-[500px]'/>
+          <Image src={globe} alt='globe' className='rotate w-[400px] h-[400px] md:w-[500px] md:h-[500px] overflow-x-hidden'/>
           <Image src={image1} alt='project' className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-[350px] md:h-[350px] w-60 h-60 object-contain'/>
           </motion.div>
          
@@ -141,7 +141,7 @@ const AboutPage = () => {
           whileInView='visible'
           viewport={{once:true}}
           >
-          <Image src={globe} alt='globe' className='rotate w-[500px] h-[500px]'/>
+          <Image src={globe} alt='globe' className='rotate w-[500px] h-[500px] overflow-x-hidden'/>
           <Image src={image1} alt='project' className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[350px] h-[350px] object-contain'/>
           </motion.div>
         </motion.div>

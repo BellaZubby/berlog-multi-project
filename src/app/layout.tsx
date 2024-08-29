@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { contactData,socialsData  } from "./hook/data";
+import Scroll from "./components/scroll";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,10 +30,11 @@ export default function RootLayout({
 
       </head>
       <body className={inter.className}>
-       
-          <Navbar/>
-         {children} 
+        <Navbar/>
+         {children}
+         <Scroll/> 
          <Footer data={contactData} dataSocial={socialsData}/>
+         
       </body>
     </html>
   );

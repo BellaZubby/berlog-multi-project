@@ -55,7 +55,7 @@ const DesktopHero = ({data}: DataType) => {
 
  
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full overflow-x-hidden">
       <AnimatePresence>
         <motion.div
           initial={false}
@@ -67,8 +67,9 @@ const DesktopHero = ({data}: DataType) => {
           transition={{ duration: 1, delay: 0.7, when: "beforeChildren" }}
           viewport={{ once: true }}
           onViewportEnter={() => setIsInView(true)}
+          className="overflow-x-hidden"
         >
-            <div className="bg-bg-image w-full h-screen bg-cover bg-fixed bg-no-repeat bg-center" onLoad={() => setIsLoaded(true)}>
+            <div className="bg-bg-image w-full h-screen bg-cover bg-fixed bg-no-repeat bg-center xs:bg-center overflow-x-hidden hidden md:block">
             <div className="bg-white/40 inset-0 h-full w-full relative">
             <div className="absolute top-[48%] md:top-[58%] -translate-y-[48%] md:-translate-y-[70%] left-4 ssm:left-7 sm:left-10">
             <motion.div 
@@ -122,6 +123,62 @@ const DesktopHero = ({data}: DataType) => {
            {/* close */}
          
           </div>
+          {/* mobile */}
+          <div className="bg-bg-image w-full h-screen bg-cover bg-no-repeat bg-center overflow-x-hidden md:hidden">
+            <div className="bg-white/40 inset-0 h-full w-full relative">
+            <div className="absolute top-[48%] md:top-[58%] -translate-y-[48%] md:-translate-y-[70%] left-4 ssm:left-7 sm:left-10">
+            <motion.div 
+          initial={{opacity:0, y:0}}                   
+          animate={{opacity:1, y:0}}
+          transition={{duration:0.5, delay:1.5}}
+          className='font-roboto text-transparent bg-clip-text bg-gradient-primary'>
+          <h1 className='text-3xl ssm:text-5xl md:block sm:text-7xl font-bold'>{capitalizedSentence}</h1>
+          </motion.div>
+            <motion.div
+            variants={slideInFromLeft(2.5)} 
+            initial='hidden'
+            whileInView='visible'
+            viewport={{once:true}}
+            className="fadeContainer mt-14">
+             
+              {
+              data.map((phrase, idx) => (
+                  <div key={idx} className={`fadeItem grid sm:grid-cols-2 grid-cols-1 ${idx===currentState ? "fadeItem-visible": ""}`}>
+                    <p className="text-xl sm:text-[22px] tracking-wider leading-relaxed text-[#3d3d3c]">{phrase.catchPhrase}</p>
+                  </div>
+                ))
+              }
+          
+          </motion.div>
+              
+
+       
+              <motion.div
+              variants={slideInFromBottom(2.8)} 
+              initial="hidden"
+              animate="visible"
+              className='mt-44 ssm:mt-40 sm:mt-44'
+              >
+                <Link href={"/aboutus"}>
+                <motion.button
+                initial="initial"
+                animate="initial"
+                whileHover="animate"
+                className='hero-btn font-medium flex items-center gap-1 hover:gap-2 bg-gradient-secondary justify-center px-10 py-3 md:px-12 md:py-4'>
+            <motion.span className='text-gray-100 font-medium text-sm ssm:text-lg font-roboto'>Learn More</motion.span>
+            <motion.span variants={arrow} className='text-primary-100'><ArrowLongUpIcon className='w-4 h-4 ssm:w-6 md:h-6 text-black'/></motion.span>
+         </motion.button> 
+                </Link>
+              
+              </motion.div>
+            </div>
+           
+            </div>
+
+           {/* close */}
+         
+          </div>
+
 
           
         </motion.div>

@@ -14,7 +14,7 @@ const ParallaxFact = (props: Props) => {
 
 <div className="bg-fact-image w-full h-[500px] bg-cover bg-fixed bg-no-repeat bg-center">
 <div className='bg-black/65 w-full h-full inset-0 flex flex-col items-center justify-center gap-5'>
-            <h4 className='text-primary-300 text-sm ssm:text-xl sm:text-3xl md:text-5xl font-semibold'>EXECELLENCE IN DESIGN AND CONSTRUCTION</h4>
+            <h4 className='text-secondary-300 text-sm ssm:text-xl sm:text-3xl md:text-5xl font-semibold'>EXECELLENCE IN DESIGN AND CONSTRUCTION</h4>
             <div className='flex items-center gap-10'>
             <motion.div 
                variants={slideInFromLeft(0)} 

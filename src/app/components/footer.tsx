@@ -22,7 +22,7 @@ const Footer:React.FC<DataType>= ({data, dataSocial}) => {
                     data.map((contact, idx) => (
                         <div key={idx}>
                             <p className='flex items-center gap-3 mt-4 sm:mt-6 text-[#525150] text-sm sm:text-[16px]'>
-                                <span className='text-primary-300'><contact.icon/></span>
+                                <span className='text-secondary-300'><contact.icon/></span>
                                 {contact.title}
                             </p>
                         </div>
@@ -35,7 +35,7 @@ const Footer:React.FC<DataType>= ({data, dataSocial}) => {
                 <div className='flex items-center gap-5'>
                     {
                         dataSocial.map((social, idx) => (
-                            <div key={idx} className='border-2 border-primary-300 rounded-full p-2 sm:mt-6 mt-4 '>
+                            <div key={idx} className='border-2 border-secondary-300 rounded-full p-2 sm:mt-6 mt-4 '>
                                  <Link href={social.href} className='text-[#525150]'>
                                 <social.icon/>
                             </Link>
@@ -47,10 +47,10 @@ const Footer:React.FC<DataType>= ({data, dataSocial}) => {
             </div>
         </div>
         <div className='bg-black/40 py-5 w-[70%] clip mt-16 text-white hidden md:block '>
-            <p className='text-[15px] ml-4'>copyright © 2024 All rights reserved by <span className='text-primary-300'>Berlog Multi Project Ltd</span>💙</p>
+            <p className='text-[15px] ml-4'>copyright © 2024 All rights reserved by <span className='text-secondary-300'>Berlog Multi Project Ltd</span>💙</p>
         </div>
         <div className='bg-black/40 py-5 w-full mt-16 text-white md:hidden flex items-center justify-center'>
-            <p className='text-[10px] sm:text-sm'>copyright © 2024 All rights reserved by <span className='text-primary-300'>Berlog Multi Project Ltd</span>💙</p>
+            <p className='text-[10px] sm:text-sm'>copyright © 2024 All rights reserved by <span className='text-secondary-300'>Berlog Multi Project Ltd</span>💙</p>
         </div>
     </div>
   )

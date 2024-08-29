@@ -21,14 +21,14 @@ const AboutHome = ({data}: Props) => {
            transition={{duration:0.5, delay:0.5}}
            viewport={{once:true, amount:0.5}}
           className='md:col-span-3 flex flex-col gap-4'>
-           <h4 className='text-center ssm:text-lg md:text-left md:leading-loose leading-loose text-primary-50'>
+           <h4 className='text-justify text-lg md:text-left tracking-wider leading-loose text-primary-50'>
             Berlog Multi Project is Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Dolore minima id temporibus nihil iste dolor nobis similique 
             voluptate alias nam quisquam sit, sint tempore ab. Dolore minima id temporibus nihil iste dolor nobis similique 
             voluptate alias nam quisquam sit, sint tempore ab
             </h4> 
            
-            <Button className='font-roboto text-primary-50'>
+            <Button className='font-roboto text-primary-50 text-lg'>
             <Link href={"/aboutus"} className=''>Learn more</Link>
             </Button>
             
@@ -48,7 +48,7 @@ const AboutHome = ({data}: Props) => {
                 <Card key={i}>
                   <AnimatedText text={data.text} className='md:text-2xl text-xl font-bold text-primary-100' />
                   <motion.p
-                  className='text-sm ssm:text-lg leading-relaxed'
+                  className='text-lg leading-relaxed tracking-wider'
                     initial={{x:100, opacity:0}}
                     whileInView={{x:0, opacity:1}}
                     viewport={{once:true, amount:0.5}}

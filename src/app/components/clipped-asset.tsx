@@ -10,7 +10,7 @@ type Props = {}
 
 const Clipped = (props: Props) => {
   return (
-    <div className='clipped w-full sm:h-[430px] h-[350px] bg-primary-100 py-24 sm:mt-20'>
+    <div className='clipped w-full sm:h-[430px] h-[360px] bg-primary-100 py-24 sm:mt-20'>
 
         <div className='bg-black/20 absolute inset-0 flex flex-col items-center justify-center gap-5'>
             <h4 className='text-primary-300 text-sm ssm:text-xl sm:text-3xl font-semibold'>EXECELLENCE IN DESIGN AND CONSTRUCTION</h4>
@@ -21,16 +21,15 @@ const Clipped = (props: Props) => {
                whileInView="visible"
                viewport={{once:true}}
               className='flex flex-col items-center text-white font-semibold  sm:px-0'>
-                <div className='text-[40px] md:text-[50px] font-roboto flex items-center'>
+                <div className='text-[45px] md:text-[50px] font-roboto flex items-center'>
                  <SliderCounter from={0} to={35}/>
                 <PlusIcon className='w-10 h-10' />
             
                 </div>
-                <h4 className='text-sm md:text-lg  font-roboto font-medium hidden sm:block'>Completed Projects across Nigeria</h4>
-                <h4 className='text-sm md:text-lg  font-roboto font-medium sm:hidden'>Completed Projects</h4>
+                <h4 className='text-lg  font-roboto font-medium hidden sm:block'>Completed Projects across Nigeria</h4>
+                <h4 className='text-lg  font-roboto font-medium sm:hidden'>Completed Projects</h4>
               </motion.div>
 
-                {/* <hr className='bg-[#C2C2C2C2] h-[1.5px] my-8 w-[70%]'/> */}
                 <motion.div 
                variants={slideInFromLeft(0)} 
                initial="hidden"
@@ -42,11 +41,11 @@ const Clipped = (props: Props) => {
                 <Percent className='w-10 h-10' />
             
                 </div>
-                <h4 className='text-sm md:text-lg font-roboto font-medium hidden sm:block'>Happy and satisfied clients</h4>
-                <h4 className='text-sm md:text-lg font-roboto font-medium sm:hidden'>Happy Clients</h4>
+                <h4 className='text-lg font-roboto font-medium hidden sm:block'>Happy and satisfied clients</h4>
+                <h4 className='text-lg font-roboto font-medium sm:hidden'>Happy Clients</h4>
                 </motion.div>
             </div>
-          <button className='hero-btn bg-gradient-secondary text-sm md:text-lg font-semibold text-white tracking-wider px-7 py-2'>
+          <button className='hero-btn bg-gradient-secondary text-[16px] md:text-lg font-semibold text-white tracking-wider px-7 py-2'>
             <Link href={'/contactus'}>Hire Us</Link>
           </button>
           </div>

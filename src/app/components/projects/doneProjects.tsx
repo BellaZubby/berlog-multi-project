@@ -58,7 +58,7 @@ const DoneProjects = ({data}:DataType) => {
         whileInView='visible'
         viewport={{once:true}}
         className='text-primary-100 col-span-2 sm:mt-14 md:mt-24 pl-7 sm:pl-0 '>
-            <h4 className='font-bold text-sm tracking-widest text-primary-300'>OUR WORKS</h4>
+            <h4 className='font-bold text-sm tracking-widest text-secondary-300'>OUR WORKS</h4>
             <p className='text-[30px] ssm:text-[35px] md:text-[45px]'>
                 Explore some of our executed projects
             </p>
@@ -68,7 +68,7 @@ const DoneProjects = ({data}:DataType) => {
        whileInView='visible'
        viewport={{once:true}}
        transition={{duration:0.1}}
-       className='hero-btn text-primary-50 bg-transparent  border-[2px] border-primary-300 px-8 py-2 mt-7 sm:block hidden'>
+       className='hero-btn text-primary-50 bg-transparent  border-[2px] border-secondary-300 px-8 py-2 mt-7 sm:block hidden'>
        <Link href={'/projects'}>View All</Link>
         </motion.button> 
         </motion.div>
@@ -78,11 +78,11 @@ const DoneProjects = ({data}:DataType) => {
          whileInView='visible'
          viewport={{once:true}}
         className='col-span-3'>
-           <Slider {...settings}>
+           <Slider {...settings} className=''>
                 {
                     data.map((image, idx) => (
-                        <div key={idx} className='w-full h-full  p-4 bg-[#ebe5e5]/50'>
-                            <Image src={image.image} alt='image'/>
+                        <div key={idx} className='w-full h-full p-4 bg-[#ebe5e5]/50'>
+                            <Image src={image.image} alt='image' className='h-[400px] object-cover'/>
                         </div>
                     ))
                 }

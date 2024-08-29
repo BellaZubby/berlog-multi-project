@@ -35,7 +35,7 @@ const Navbar = (props: Props) => {
   );
   const navbarBackground = isTopOfPage ? "hidden" :  "block";
   return (
-     <nav className='font-roboto relative z-[99]'>
+     <nav className='font-roboto relative z-[99] overflow-x-hidden'>
       {
         aboveMediumScreen && (
           <motion.div 
@@ -103,13 +103,13 @@ const Navbar = (props: Props) => {
             animate="visible"
           
           >
-            <div className='px-7 flex relative items-center justify-between py-5'>
+            <div className='px-7 flex relative items-center justify-between py-4'>
             <Link href={"/"} className=''>
               <Image className='w-20 ssm:w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
             </Link>
             
-            <span className='border rounded-full p-2 ssm:p-[10px] border-gray-600'>
-                <Menu className='text-primary-100 w-5 h-5 ssm:w-7 ssm:h-7' onClick={() => setIsMenuToggled(true)}/>
+            <span className='border rounded-full p-[10px] border-gray-600'>
+                <Menu className='text-primary-100 w-7 h-7' onClick={() => setIsMenuToggled(true)}/>
             </span>
             </div>
           </motion.div>
@@ -140,13 +140,13 @@ const Navbar = (props: Props) => {
               initial="closed"
               animate="open"
               exit="closed"
-              className='w-[300px] sm:w-[500px] h-screen bg-[#F3F4F6] drop-shadow-xl text-primary-50'>
+              className='w-[250px] ssm:w-[430px] sm:w-[500px] h-screen bg-[#F3F4F6] drop-shadow-xl text-primary-50'>
               <div className='shadow-lg flex items-center justify-between px-4 py-5'>
               <Link href={"/"} className=''>
-              <Image className='w-20 sm:w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
+              <Image className='w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
               </Link>
-              <span className='border rounded-full p-1 sm:p-2 border-gray-400'>
-                <XIcon className='text-primary-100 w-5 h-5 sm:w-7 sm:h-7' onClick={() => setIsMenuToggled(!isMenuToggled)}/>
+              <span className='border rounded-full p-[10px] border-gray-400'>
+                <XIcon className='text-primary-100 w-7 h-7' onClick={() => setIsMenuToggled(!isMenuToggled)}/>
               </span>
               
               </div>

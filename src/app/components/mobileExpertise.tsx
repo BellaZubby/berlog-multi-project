@@ -41,7 +41,7 @@ const MobileExpertise = (props: Props) => {
                whileInView={{opacity:1}}
                viewport={{once:true}}
                transition={{duration:0.5, delay:1}}
-                className='text-sm ssm:text-lg mb-5'
+                className='text-[16px] ssm:text-lg mb-5 tracking-wide'
               >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Nam aperiam aut quia quos adipisci id.</motion.p>
         <motion.div
@@ -85,7 +85,7 @@ const MobileExpertise = (props: Props) => {
                 whileInView={{opacity:1}}
                 viewport={{once:true}}
                 transition={{duration:0.5, delay:1}}
-                 className='text-sm mb-5 ssm:text-lg'
+                 className='text-[16px] mb-5 ssm:text-lg tracking-wide'
               >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Nam aperiam aut quia quos adipisci id.</motion.p>
                  <motion.div
@@ -128,7 +128,7 @@ const MobileExpertise = (props: Props) => {
                 whileInView={{opacity:1}}
                 viewport={{once:true}}
                 transition={{duration:0.5, delay:1}}
-                 className='text-sm mb-5 ssm:text-lg'
+                 className='text-[16px] mb-5 ssm:text-lg tracking-wide'
               >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Nam aperiam aut quia quos adipisci id.</motion.p>
                  <motion.div
@@ -171,7 +171,7 @@ const MobileExpertise = (props: Props) => {
                 whileInView={{opacity:1}}
                 viewport={{once:true}}
                 transition={{duration:0.5, delay:1}}
-                className='text-sm mb-5 ssm:text-lg'
+                className='text-[16px] mb-5 ssm:text-lg tracking-wide'
               >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Nam aperiam aut quia quos adipisci id.</motion.p>
                  <motion.div
