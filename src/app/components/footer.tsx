@@ -46,12 +46,17 @@ const Footer:React.FC<DataType>= ({data, dataSocial}) => {
                 </div>
             </div>
         </div>
+        <div className='flex items-center relative'>
         <div className='bg-black/40 py-5 w-[70%] clip mt-16 text-white hidden md:block '>
-            <p className='text-[15px] ml-4'>copyright © 2024 All rights reserved by <span className='text-secondary-300'>Berlog Multi Project Ltd</span>💙</p>
+            <p className='text-[15px] ml-4'>Copyright © 2024 All rights reserved <span className='text-secondary-300'>Berlog Multi Project Ltd</span></p>
         </div>
-        <div className='bg-black/40 py-5 w-full mt-16 text-white md:hidden flex items-center justify-center'>
-            <p className='text-[10px] sm:text-sm'>copyright © 2024 All rights reserved by <span className='text-secondary-300'>Berlog Multi Project Ltd</span>💙</p>
+        <div className='bg-black/40 py-4 w-full mt-16 text-white md:hidden text-center'>
+            <p className='text-[10px] sm:text-sm'>Copyright © 2024 All rights reserved <span className='text-secondary-300'>Berlog Multi Project Ltd</span></p>
+            <p className='text-[10px] sm:text-sm text-primary-100 font-bold md:hidden mt-1'>Powered by Bella</p>
         </div>
+        <div className='absolute bottom-2 right-20 text-primary-100 text-sm font-bold hidden md:block'>Powered by Bella</div>
+        </div>
+        
     </div>
   )
 }
