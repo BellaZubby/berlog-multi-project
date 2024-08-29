@@ -31,7 +31,7 @@ const Project = () => {
       variants={slideInFromRight(1.3)}
       initial='hidden'
       animate='visible'
-      className='text-center text-2xl font-poppins text-transparent bg-clip-text bg-gradient-secondary-100 mt-14'>
+      className='text-center text-2xl font-poppins text-transparent bg-clip-text bg-gradient-secondary-100 mt-14 overflow-x-hidden'>
         Gallery of our previous works
       </motion.h5>
       <Projects/>

@@ -28,7 +28,7 @@ const Banner = ({children}: Props) => {
         viewport={{ once: true }}
         onViewportEnter={() => setIsInView(true)}>
          <div className='w-full h-64 ssm:h-72 sm:h-96 bg-primary-100 text-white flex items-center justify-center relative overflow-x-hidden'>
-         <h2 className='text-4xl sm:text-[42px] font-bold z-1 absolute z-[1] tracking-wider'>{children}</h2>
+         <h2 className='text-[32px] sm:text-[42px] font-bold z-1 absolute z-[1] tracking-wider'>{children}</h2>
          <BgAssetOne className='w-72 h-72 ssm:w-[350px] ssm:h-[350px] md:w-96 md:h-96 rounded-full bg-black/30 absolute left-1/2 -translate-x-1/2  md:block'/>
          </div>
          

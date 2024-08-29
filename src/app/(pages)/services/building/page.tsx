@@ -27,7 +27,7 @@ const Construction = (props: Props) => {
   }
  if (!loading) {
   return (
-    <div className='font-roboto'>
+    <div className='font-roboto overflow-x-hidden'>
       <Banner>
         Building Construction
       </Banner>
@@ -39,7 +39,7 @@ const Construction = (props: Props) => {
           duration:0.5,
           delay:1.4
         }}
-        className='grid md:grid-cols-2 items-center justify-center gap-10 pb-12 md:gap-16 md:py-28 md:px-16'>
+        className='grid md:grid-cols-2 items-center justify-center gap-10 pb-12 md:gap-16 md:py-28 md:px-16 overflow-x-hidden'>
         <motion.div 
         initial={{opacity:0}}
         whileInView={{opacity:1}}

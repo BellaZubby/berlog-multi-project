@@ -50,7 +50,7 @@ const DoneProjects = ({data}:DataType) => {
         nextArrow: <NextArrow />,
       };
   return (
-    <div className='h-auto grid sm:grid-cols-5 grid-cols-1 sm:pt-20 sm:px-10 py-16 gap-12 sm:gap-0 bg-[#ebe5e5]/50'>
+    <div className='h-auto grid sm:grid-cols-5 grid-cols-1 sm:pt-20 sm:px-10 py-16 gap-12 sm:gap-0 bg-[#ebe5e5]/50 overflow-x-hidden'>
         
         <motion.div 
         variants={slideInFromLeft(0)}

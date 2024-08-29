@@ -67,11 +67,11 @@ const Contactpage = () => {
   }
  if (!loading) {
   return (
-    <div className='bg-gradient'>
+    <div className='bg-gradient overflow-x-hidden'>
       <Banner>
         Contact Us
       </Banner>
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-5 md:items-center md:justify-center pt-16 sm:pt-24 sm:px-10 px-7'>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-5 md:items-center md:justify-center pt-16 sm:pt-24 sm:px-10 px-7 overflow-x-hidden'>
         {/* contact info */}
         <motion.div
           variants={slideInFromLeft(0.7)}

@@ -14,7 +14,7 @@ interface Props {
 
 const AboutHome = ({data}: Props) => {
   return (
-    <div className='pt-20 md:pb-20 pb-10 md:grid md:grid-cols-5 md:gap-20 flex flex-col items-center gap-14 px-10 md:bg-no-repeat md:bg-fixed md:bg-[center_center] md:bg-home-about relative md:bg-[length:500px_300px]'>
+    <div className='pt-20 md:pb-20 pb-10 md:grid md:grid-cols-5 md:gap-20 flex flex-col items-center gap-14 px-10 md:bg-no-repeat md:bg-fixed md:bg-[center_center] md:bg-home-about relative md:bg-[length:500px_300px] overflow-x-hidden'>
       <div className='absolute inset-0 bg-white/90 hidden md:block'/>
       <motion.div 
            initial={{opacity:0, x:-100}}

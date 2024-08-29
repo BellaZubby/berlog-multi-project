@@ -105,7 +105,7 @@ const Navbar = (props: Props) => {
           >
             <div className='px-7 flex relative items-center justify-between py-4'>
             <Link href={"/"} className=''>
-              <Image className='w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
+              <Image className='w-28 object-cover' src={berlogLogo} alt='berlog-logo'/>
             </Link>
             
             <span className='border rounded-full p-[10px] border-gray-600'>
@@ -140,10 +140,10 @@ const Navbar = (props: Props) => {
               initial="closed"
               animate="open"
               exit="closed"
-              className='w-[250px] ssm:w-[430px] sm:w-[500px] h-screen bg-[#F3F4F6] drop-shadow-xl text-primary-50'>
+              className='w-[300px] ssm:w-[430px] sm:w-[500px] h-screen bg-[#F3F4F6] drop-shadow-xl text-primary-50'>
               <div className='shadow-lg flex items-center justify-between px-4 py-5'>
               <Link href={"/"} className=''>
-              <Image className='w-24 object-cover' src={berlogLogo} alt='berlog-logo'/>
+              <Image className='w-28 object-cover' src={berlogLogo} alt='berlog-logo'/>
               </Link>
               <span className='border rounded-full p-[10px] border-gray-400'>
                 <XIcon className='text-primary-100 w-7 h-7' onClick={() => setIsMenuToggled(!isMenuToggled)}/>

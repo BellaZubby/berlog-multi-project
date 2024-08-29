@@ -13,11 +13,11 @@ type Props = {}
 const Facts = (props: Props) => {
   return (
             <div className='py-16 sm:pt-10 sm:pb-32 sm:px-10 relative w-full md:hidden'>
-          <div className='w-full md:w-[95%] md:mx-auto relative'>
+          <div className='w-full md:w-[95%] md:mx-auto relative overflow-x-hidden'>
           <Image src={factsImage} alt='factImage' className='h-80 object-cover'/>
           <div className='bg-black/65 absolute inset-0 flex flex-col items-center justify-center gap-5'>
             <h4 className='text-secondary-300 text-[16px] ssm:text-xl sm:text-3xl font-semibold mt-10'>EXECELLENCE IN DESIGN AND CONSTRUCTION</h4>
-            <div className='flex items-center gap-10'>
+            <div className='flex items-center gap-10 overflow-x-hidden'>
             <motion.div 
                variants={slideInFromLeft(0)} 
                initial="hidden"

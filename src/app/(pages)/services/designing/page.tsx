@@ -29,7 +29,7 @@ const Service3 = (props: Props) => {
   }
  if (!loading) {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Banner>
         Designing
       </Banner>
@@ -55,7 +55,7 @@ const Service3 = (props: Props) => {
           </motion.div>
           {/* for mobile */}
           <motion.div 
-         className='flex flex-col items-center justify-center gap-5 px-4 md:hidden'
+         className='flex flex-col items-center justify-center gap-5 px-4 md:hidden overflow-x-hidden'
          variants={slideInFromLeft(1.2)}
          initial='hidden'
          whileInView='visible'
